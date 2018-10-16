@@ -13,7 +13,8 @@ function Column(name) {
     this.id = randomString();
     this.name = name;
     this.element = generateTemplate('column-template', { name: this.name, id: this.id });
-  
+    this.element.classList.add('columnBox');
+    
     this.element.querySelector('.column').addEventListener('click', function (event) {
       if (event.target.classList.contains('btn-delete')) {
         self.removeColumn();
@@ -99,7 +100,7 @@ function randomString() {
 function generateTemplate(name, data, basicElement) {
     var template = document.getElementById(name).innerHTML;
     var element = document.createElement(basicElement || 'div');
-  
+    
     Mustache.parse(template);
     element.innerHTML = Mustache.render(template, data);
   

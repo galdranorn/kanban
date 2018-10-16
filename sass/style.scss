@@ -1,1 +1,47 @@
 * {box-sizing: border-box;}
+
+body, html {
+    height: 100%;
+}
+
+body { 
+    font-family: Josefin Sans;
+    background-image: url("../images/succulents.jpeg");
+    height: 100%; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    .container {
+        display: flex;
+        padding: 10px 10px;
+        #board{
+            text-align: center;
+            width: 80%;
+            ul {list-style: none;}
+            .columnBox {
+                width: 30%;
+                display: inline-block;
+                background: white;
+                vertical-align: top;
+                background: rgba(255, 255, 255, 0.6);
+                .card {
+                    float: left;
+                    width: 100%;
+                    border: 1px dashed black;
+                    background: white;
+                    margin: 5px auto;
+                    padding: 10px;
+                    position: relative;
+                    button {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
