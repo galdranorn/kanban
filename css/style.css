@@ -29,6 +29,7 @@ body .container #board {
 body .container #board ul {
   list-style: none;
   padding: 5px 20px;
+  min-height: 400px;
 }
 
 body .container #board .buttons {
@@ -57,7 +58,7 @@ body .container #board .create-column {
 
 body .container #board .columnBox {
   width: 30%;
-  min-height: 200px;
+  min-height: 400px;
   display: inline-block;
   background: white;
   vertical-align: top;
