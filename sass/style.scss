@@ -94,5 +94,9 @@ body {
     body .container #board .columnBox {
         width: 100%;
         margin: 5px;
+        min-height: 100px;
+    }
+    body .container #board ul {
+        min-height: 50px;
     }
 };
