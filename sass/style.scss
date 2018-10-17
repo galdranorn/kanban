@@ -91,12 +91,15 @@ body {
 };
 
 @media (max-width: 600px) {
-    body .container #board .columnBox {
-        width: 100%;
-        margin: 5px;
-        min-height: 100px;
+    body {
+    background-repeat: repeat-y;
+        .container #board {
+            .columnBox {
+            width: 100%;
+            margin: 5px;
+            min-height: 100px;
+            }
+        ul {min-height: 50px;}
     }
-    body .container #board ul {
-        min-height: 50px;
-    }
+}
 };
