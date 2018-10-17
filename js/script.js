@@ -14,7 +14,7 @@ function Column(name) {
     this.name = name;
     this.element = generateTemplate('column-template', { name: this.name, id: this.id });
     this.element.classList.add('columnBox');
-    
+
     this.element.querySelector('.column').addEventListener('click', function (event) {
       if (event.target.classList.contains('btn-delete')) {
         self.removeColumn();
@@ -136,13 +136,16 @@ board.addColumn(doingColumn);
 board.addColumn(doneColumn);
 
 // CREATING CARDS
-var card1 = new Card('New task');
-var card2 = new Card('Create kanban boards');
+var card1 = new Card('Finish Kodilla course');
+var card2 = new Card('Find job as web developer');
+var card3 = new Card('OOP module');
+var card4 = new Card('CSS for kanban exercise');
 
 // ADDING CARDS TO COLUMNS
 todoColumn.addCard(card1);
-doingColumn.addCard(card2);
-
+todoColumn.addCard(card2);
+doingColumn.addCard(card3);
+doneColumn.addCard(card4);
 //end of DOM full loading listener 
 });
 
