@@ -1,36 +1,86 @@
-* { box-sizing: border-box; }
+body {
+  margin: 0;
+}
 
-body, html { height: 100%; }
+* {
+  box-sizing: border-box;
+}
 
-body { font-family: Josefin Sans; background-image: url("../images/succulents.jpeg"); height: 100%; background-position: right; background-repeat: no-repeat; background-size: auto 100%; }
+.ui-sortable {
+  min-height: 80px;
+}
 
-body .container { display: -ms-flexbox; display: flex; padding: 10px 10px; }
+.btn-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
 
-body .container #board { text-align: center; width: 80%; }
+/* BOARD */
+.board h1 {
+  margin-left: 8px;
+}
 
-body .container #board ul { list-style: none; padding: 5px 20px; min-height: 400px; }
+.column-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 
-body .container #board .buttons { text-align: center; }
+/* COLUMN */
+.column {
+  -ms-flex-order: 1;
+      order: 1;
+  min-width: 300px;
+  min-height: 50vh;
+  background-color: lightgrey;
+  margin-left: 8px;
+  list-style: none;
+  position: relative;
+}
 
-body .container #board button { background: white; border: 1px solid black; padding: 8px 10px 5px 10px; border-radius: 5px; transition: .2s; }
+.column-add-card {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 5px 8px;
+  display: block;
+}
 
-body .container #board button:hover { background: black; color: white; cursor: pointer; }
+/* STYLE KARTY */
+.card {
+  box-sizing: border-box;
+  display: block;
+  height: 60px;
+  margin-bottom: 5px;
+  padding: 4px;
+  overflow: hidden;
+  position: relative;
+}
 
-body .container #board .create-column { position: absolute; top: 30px; right: 20%; }
+.card-list {
+  list-style: none;
+  margin: 5px;
+  padding: 0px;
+}
 
-body .container #board .columnBox { width: 30%; min-height: 400px; display: inline-block; background: white; vertical-align: top; background: rgba(255, 255, 255, 0.6); border-radius: 10px; margin: 0 5px; }
+.card-description {
+  margin: 2px 0;
+}
 
-body .container #board .columnBox button { font-size: 12px; font-weight: lighter; }
-
-body .container #board .columnBox .card { width: 100%; border: 1px dashed #5e8455; background: white; margin: 5px; padding: 10px; position: relative; color: #5e8455; font-weight: lighter; }
-
-body .container #board .columnBox .card:hover { background: #e3f0df; cursor: -webkit-grab; cursor: grab; }
-
-body .container #board .columnBox .card button { position: absolute; top: 0; right: 0; background: none; border: none; color: #5e8455; }
-
-@media (max-width: 768px) { body .container #board { width: 100%; }
-  body .container #board .create-column { position: initial; margin-bottom: 10px; } }
-
-@media (max-width: 600px) { body { background-repeat: repeat-y; }
-  body .container #board .columnBox { width: 100%; margin: 5px; min-height: 100px; }
-  body .container #board ul { min-height: 50px; } }
+.card-placeholder {
+  box-sizing: border-box;
+  display: block;
+  height: 60px;
+  margin-bottom: 5px;
+  border: 2px solid lightgrey;
+  background-color: lightblue;
+}
+/*# sourceMappingURL=style.css.map */
