@@ -1,3 +1,7 @@
+//-----------------------------------------------------------------
+// COLUMN
+// ----------------------------------------------------------------
+
 function Column(id, name) {
   var self = this;
 
@@ -12,6 +16,7 @@ function Column(id, name) {
 
     if (event.target.classList.contains('add-card')) {
       var cardName = prompt("Enter the name of the card");
+      var data = new FormData();
       event.preventDefault();
 
       var data = new FormData();
@@ -20,18 +25,17 @@ function Column(id, name) {
 
       fetch(baseUrl + '/card', {
         method: 'POST',
-        body: {
-          //body query
-        }
+        headers: myHeaders,
+        body: data
       })
       .then(function(res) {
         return res.json();
       })
       .then(function() {
-        //create a new client side card
+       //
       });
 
-      self.addCard(new Card(cardName));
+      self.addCard(new Card(id, cardName));
     }
 });
 }

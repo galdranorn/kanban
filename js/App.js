@@ -5,6 +5,10 @@ const myHeaders = {
   'X-Auth-Token': '16403045ea8cfafe532e2b1d7dbc399d'
 };
 
+//-----------------------------------------------------------------
+// APP
+// ----------------------------------------------------------------
+
 // ASK SERVER ABOUT ARRAY CONTENT
 fetch(baseUrl + '/board', { headers: myHeaders })
   .then(function(resp) {
@@ -17,21 +21,21 @@ fetch(baseUrl + '/board', { headers: myHeaders })
 // FUNCTION FOR CREATING COLUMN
 function setupColumns(columns) {
 	columns.forEach(function(column) {
-		  var col = new Column(column.id, column.name);
+		var col = new Column(column.id, column.name);
 		board.addColumn(col);
 		setupCards(col, column.cards);
 	});
   }
 
 //  FUNCTION FOR CREATING CARDS
-  function setupCards(col, cards) {
+function setupCards(col, cards) {
 	cards.forEach(function (card) {
     var cardObj = new Card(card.id, card.name);
-  	col.addCard(cardObj);
+    col.addCard(cardObj);
 	});
 }
 
-// OGÓLNA FUNKCJA
+// GENERATING OBJECTS WITH MUSTACHE TEMPLATES
 
 function generateTemplate(name, data, basicElement) {
   	var template = document.getElementById(name).innerHTML;
