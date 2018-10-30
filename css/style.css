@@ -1,123 +1,36 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-body, html {
-  height: 100%;
-}
+body, html { height: 100%; }
 
-body {
-  font-family: Josefin Sans;
-  background-image: url("../images/succulents.jpeg");
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-}
+body { font-family: Josefin Sans; background-image: url("../images/succulents.jpeg"); background-position: right; background-repeat: no-repeat; background-size: auto 100%; }
 
-.container {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px 10px;
-}
+.container { display: -ms-flexbox; display: flex; padding: 10px 10px; }
 
-.container #board {
-  text-align: center;
-  width: 80%;
-}
+.container #board { text-align: center; width: 80%; }
 
-.container #board ul {
-  list-style: none;
-  padding: 5px 20px;
-  min-height: 400px;
-}
+.container #board ul { list-style: none; padding: 5px 20px; min-height: 400px; }
 
-.container #board .buttons {
-  text-align: center;
-}
+.container #board .buttons { text-align: center; }
 
-.container #board button {
-  background: white;
-  border: 1px solid black;
-  padding: 8px 10px 5px 10px;
-  border-radius: 5px;
-  transition: .2s;
-}
+.container #board button { background: white; border: 1px solid black; padding: 8px 10px 5px 10px; border-radius: 5px; transition: .2s; }
 
-.container #board button:hover {
-  background: black;
-  color: white;
-  cursor: pointer;
-}
+.container #board button:hover { background: black; color: white; cursor: pointer; }
 
-.container #board .create-column {
-  position: absolute;
-  top: 30px;
-  right: 20%;
-}
+.container #board .create-column { position: absolute; top: 30px; right: 20%; }
 
-.container #board .columnBox {
-  width: 30%;
-  min-height: 400px;
-  display: inline-block;
-  background: white;
-  vertical-align: top;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 10px;
-  margin: 0 5px;
-}
+.container #board .columnBox { width: 30%; min-height: 400px; display: inline-block; background: white; vertical-align: top; background: rgba(255, 255, 255, 0.6); border-radius: 10px; margin: 0 5px; }
 
-.container #board .columnBox button {
-  font-size: 12px;
-  font-weight: lighter;
-}
+.container #board .columnBox button { font-size: 12px; font-weight: lighter; }
 
-.container #board .columnBox .card {
-  width: 100%;
-  border: 1px dashed #5e8455;
-  background: white;
-  margin: 5px;
-  padding: 10px;
-  position: relative;
-  color: #5e8455;
-  font-weight: lighter;
-}
+.container #board .columnBox .card { width: 100%; border: 1px dashed #5e8455; background: white; margin: 5px; padding: 10px; position: relative; color: #5e8455; font-weight: lighter; }
 
-.container #board .columnBox .card:hover {
-  background: #e3f0df;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
+.container #board .columnBox .card:hover { background: #e3f0df; cursor: -webkit-grab; cursor: grab; }
 
-.container #board .columnBox .card .btn-delete {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: none;
-  border: none;
-  color: #5e8455;
-}
+.container #board .columnBox .card .btn-delete { position: absolute; top: 0; right: 0; background: none; border: none; color: #5e8455; }
 
-@media (max-width: 768px) {
-  body .container #board {
-    width: 100%;
-  }
-  body .container #board .create-column {
-    position: initial;
-    margin-bottom: 10px;
-  }
-}
+@media (max-width: 768px) { body .container #board { width: 100%; }
+  body .container #board .create-column { position: initial; margin-bottom: 10px; } }
 
-@media (max-width: 600px) {
-  body {
-    background-repeat: repeat-y;
-  }
-  body .container #board .columnBox {
-    width: 100%;
-    margin: 5px;
-    min-height: 100px;
-  }
-  body .container #board ul {
-    min-height: 50px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 600px) { body { background-repeat: repeat-y; }
+  body .container #board .columnBox { width: 100%; margin: 5px; min-height: 100px; }
+  body .container #board ul { min-height: 50px; } }

@@ -5,18 +5,20 @@ const myHeaders = {
   'X-Auth-Token': '16403045ea8cfafe532e2b1d7dbc399d'
 };
 
-//-----------------------------------------------------------------
-// APP
-// ----------------------------------------------------------------
-
 // ASK SERVER ABOUT ARRAY CONTENT
 fetch(baseUrl + '/board', { headers: myHeaders })
+
   .then(function(resp) {
     return resp.json();
-  })
+	})
+	
   .then(function(resp) {
     setupColumns(resp.columns);
   });
+
+//-----------------------------------------------------------------
+// FUNCTIONS
+// ----------------------------------------------------------------
 
 // FUNCTION FOR CREATING COLUMN
 function setupColumns(columns) {
