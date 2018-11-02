@@ -40,7 +40,7 @@ Card.prototype = {
       })
       
       .then(function(resp) {
-        self.element.parentNode.removeChild(this.element);
+        self.element.remove();
       })
   }
 }
